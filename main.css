@@ -1,0 +1,104 @@
+:root {
+    --appBackground: #dcdcb7;
+    --appBlue: #2929a5;
+    --appYellow: #fafad2;
+    --appDarkGreen: #082e08;
+    --appGreen: #2cb922;
+    --appOrange: #ff5c0e;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 62.6%;
+    background-color: darkseagreen;
+    height: 100vh;
+    display: flex;
+}
+
+#app-main {
+    width: 24rem;
+    height: 32rem;
+    background-color: lightgoldenrodyellow;
+    margin: auto;
+}
+
+#start-menu {
+    height: 4rem;
+    background: var(--appBlue);
+    font-size: 2.4rem;
+    padding: 0.6rem 1rem;
+    display: flex;
+    gap: 1.6rem;
+}
+
+#start-menu i {
+    color: var(--appYellow)
+}
+
+#folder-display {
+    padding: 0.2rem 1.6rem;
+    overflow-y: auto;
+}
+
+.folder-node-title {
+    font-size: 1.2rem;
+    margin-top: 0.3rem;
+    display: flex;
+    justify-content: space-between;
+    color: var(--appDarkGreen);
+}
+
+span.folder-node-add-folder {
+    font-size: 0.8rem;
+    margin-left: 0.8rem;
+    color: var(--appOrange);
+}
+
+span.folder-node-add-file {
+    font-size: 0.8rem;
+    margin-left: 0.8rem;
+    color: var(--appGreen);
+}
+
+.folder-node-body {
+    padding-left: 1rem;
+    color: var(--appDarkGreen);
+}
+
+.file-node {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    margin-top: 0.3rem;
+    color: var(--appDarkGreen);
+}
+
+
+i.fa-solid.fa-file,
+i.fa-solid.fa-folder {
+    margin-right: 0.8rem;
+}
+
+i.fa-solid.fa-folder {
+    color: var(--appOrange);
+}
+
+i.fa-solid.fa-file {
+    color: var(--appGreen);
+}
+
+
+input {
+    line-height: 1.6rem;
+    background-color: var(--appBackground);
+    margin-top: 0.3rem;
+    outline: none;
+    border-radius: 0.4rem;
+    border: 1px solid var(--appBlue);
+}
+
+/*<i class="fa-duotone fa-file-circle-plus" style="--fa-primary-color: #08388c; --fa-secondary-color: #2cb922;"></i>*/
