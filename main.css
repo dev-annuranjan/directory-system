@@ -111,6 +111,10 @@ i.fa-solid.fa-file {
     color: var(--appGreen);
 }
 
+span .fa-solid.fa-trash {
+    font-size: 1rem;
+}
+
 input {
     line-height: 1.6rem;
     background-color: var(--appBackground);

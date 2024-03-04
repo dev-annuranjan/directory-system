@@ -23,15 +23,16 @@ const state = {
         focusOut: 2
     }
 }
+
 renderPage();
 
 function renderPage() {
     const {folder} = state;
 
     const addFolderEl = document.getElementById("add-folder");
-    addFolderEl.setAttribute('data-name', 'folder');
+    // addFolderEl.setAttribute('data-name', 'folder');
     const addFileEl = document.getElementById("add-file");
-    addFileEl.setAttribute('data-name', 'folder');
+    // addFileEl.setAttribute('data-name', 'folder');
 
     addFolderEl.addEventListener('click', addEntityProxy(state.entityType.folder));
     addFileEl.addEventListener('click', addEntityProxy(state.entityType.file));
