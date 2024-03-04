@@ -11,6 +11,26 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    width: 0.6rem;
+    height: 100%;
+    border-radius: 0.4rem;
+}
+
+::-webkit-scrollbar-button {
+    background: var(--appBlue);
+    display: none;
+}
+
+::-webkit-scrollbar-track-piece {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--appBlue);
+    border-radius: 0.2rem;
+}
+
 body {
     margin: 0;
     font-size: 62.6%;
@@ -42,6 +62,7 @@ body {
 #folder-display {
     padding: 0.2rem 1.6rem;
     overflow-y: auto;
+    height: 28rem;
 }
 
 .folder-node-title {
@@ -77,7 +98,6 @@ span.folder-node-add-file {
     color: var(--appDarkGreen);
 }
 
-
 i.fa-solid.fa-file,
 i.fa-solid.fa-folder {
     margin-right: 0.8rem;
@@ -91,14 +111,12 @@ i.fa-solid.fa-file {
     color: var(--appGreen);
 }
 
-
 input {
     line-height: 1.6rem;
     background-color: var(--appBackground);
     margin-top: 0.3rem;
     outline: none;
-    border-radius: 0.4rem;
-    border: 1px solid var(--appBlue);
+    border-radius: 0.2rem;
+    border: 2px solid var(--appBlue);
+    padding: 0.2rem 1rem;
 }
-
-/*<i class="fa-duotone fa-file-circle-plus" style="--fa-primary-color: #08388c; --fa-secondary-color: #2cb922;"></i>*/

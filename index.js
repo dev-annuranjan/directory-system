@@ -12,9 +12,7 @@ const state = {
                     }
                 }
             }
-        },
-        file3: "txt",
-        file4: ".js"
+        }
     },
     entityType: {
         folder: 1,
@@ -74,22 +72,23 @@ function addEntity(inputTargetParentEl, type) {
 }
 
 function addEntityHandler(event, inputEl, inputParentEl, targetFolder, eventType, type) {
-    // debugger;
-    if (eventType === state.eventType.keypress && event.key !== "Enter") return;
-    const entityName = inputEl.value;
-    inputEl.remove();
-    if (entityName) {
-        if (targetFolder[entityName]) return;
-        let newElement;
-        if (type === state.entityType.file) {
-            targetFolder[entityName] = entityName;
-            newElement = createFileNodeEl(entityName);
-        } else {
-            const path = inputParentEl.parentElement.getAttribute("data-name")
-            targetFolder[entityName] = {};
-            newElement = createFolderNodeEl(entityName, targetFolder[entityName], path);
+    if (inputEl) {
+        if (eventType === state.eventType.keypress && event.key !== "Enter") return;
+        const entityName = inputEl.value;
+        inputEl.remove();
+        if (entityName) {
+            if (targetFolder[entityName]) return;
+            let newElement;
+            if (type === state.entityType.file) {
+                targetFolder[entityName] = entityName;
+                newElement = createFileNodeEl(entityName);
+            } else {
+                const path = inputParentEl.parentElement.getAttribute("data-name")
+                targetFolder[entityName] = {};
+                newElement = createFolderNodeEl(entityName, targetFolder[entityName], path);
+            }
+            inputParentEl.appendChild(newElement)
         }
-        inputParentEl.appendChild(newElement)
     }
 }
 
